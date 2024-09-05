@@ -28,23 +28,25 @@ const Home = () => {
   }, [screenSize]);
 
   return (
-    <div className="mx-8">
-      <div className="sm:max-w-screen-sm sm:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl my-16">
-        <Overview />
-        <div className="mt-20">
-          <Resources />
-        </div>
-        <div className="mt-20">
-          <About />
-        </div>
-        <div className="mt-20">
-          <Commands />
-        </div>
-        <div className="mt-36">
-          <Footer />
+    <>
+      <div className="mx-8">
+        <div className="sm:max-w-screen-sm sm:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl my-16">
+          <Overview />
+          <div className="mt-20">
+            <Resources />
+          </div>
+          <div className="mt-20">
+            <About />
+          </div>
+          <div className="mt-20">
+            <Commands />
+          </div>
+          <div className="mt-36">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
