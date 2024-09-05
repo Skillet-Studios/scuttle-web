@@ -1,16 +1,16 @@
 function About() {
   return (
-    <div className="w-3/5 text-neutral-300">
+    <div className="xl:w-2/3 text-neutral-300 text-sm md:text-base lg:text-lg">
       <p className="text-neutral-600 text-lg">03 - About</p>
       <div className="flex flex-col gap-6">
-        <p className="text-lg text-neutral-300 mt-5">
+        <p className=" text-neutral-300 mt-5">
           Scuttle is a League of Legends discord bot for diplaying summoner
           match data. Some of the stats provided are Average Assists, Average
           Kill Participation, Average Gold per Minute, Average Damage to
           Champions, and many more.
         </p>
 
-        <p className="text-lg text-neutral-300">🚀 Getting started</p>
+        <p className=" text-neutral-300">🚀 Getting started</p>
 
         <ul className="text-neutral-400">
           <li>1. Add Scuttle to your server.</li>

@@ -87,17 +87,17 @@ function Commands() {
   };
 
   return (
-    <div className="mt-4" id="commands">
+    <div className="mt-4 text-sm md:text-base lg:text-lg" id="commands">
       <p className="text-neutral-600 text-lg">04 - Commands</p>
-      <div className="mt-4 grid grid-cols-3 gap-4">
+      <div className="mt-4 grid md:gap-4 md:grid-cols-2 lg:grid-cols-3">
         {commands.map((command, index) => (
           <div
             key={index}
             onClick={() => handleCommandClick(command.demoUrl)}
-            className="cursor-pointer"
+            className="cursor-pointer hover:border-2 border-2 border-transparent hover:border-neutral-800 p-2 rounded"
           >
-            <p className="text-lg text-lime-300">{command.name}</p>
-            <p className="text-lg text-neutral-600">{command.description}</p>
+            <p className="text-lime-300">{command.name}</p>
+            <p className=" text-neutral-600">{command.description}</p>
           </div>
         ))}
       </div>

@@ -24,9 +24,9 @@ function Overview() {
   }, []);
 
   return (
-    <div className="w-3/5">
+    <div className="">
       <p className="text-neutral-600 text-lg">01 - Overview</p>
-      <h1 className="text-2xl text-neutral-300 py-4">
+      <h1 className="text-xl md:text-2xl lg:w-2/3 text-neutral-300 py-4">
         <span className="text-lime-400">
           <a href={botUrl}>Scuttle</a>
         </span>{" "}
