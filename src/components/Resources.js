@@ -7,18 +7,32 @@ function Resources() {
       <p className="text-neutral-600 text-lg">02 - Resources</p>
       <div className="flex gap-6 mt-5">
         <div className="flex flex-col gap-3">
-          <a href="#about">About</a>
-          <a href="#commands">Commands</a>
-          <a href={supportUrl} className="text-lime-300">
+          <a href="#about" className="hover:font-bold hover:italic">
+            About
+          </a>
+          <a href="#commands" className="hover:font-bold hover:italic">
+            Commands
+          </a>
+          <a
+            href={supportUrl}
+            className="text-lime-300 hover:font-bold hover:italic"
+          >
             Support
           </a>
         </div>
         <div className="flex flex-col gap-3">
-          <a href={botUrl} className="text-lime-300">
+          <a
+            href={botUrl}
+            className="text-lime-300 hover:font-bold hover:italic"
+          >
             Add Bot
           </a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/tos">Terms and Conditions</a>
+          <a href="/privacy-policy" className="hover:font-bold hover:italic">
+            Privacy Policy
+          </a>
+          <a href="/tos" className="hover:font-bold hover:italic">
+            Terms and Conditions
+          </a>
         </div>
       </div>
     </div>

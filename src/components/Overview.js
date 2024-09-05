@@ -27,12 +27,12 @@ function Overview() {
     <div className="">
       <p className="text-neutral-600 text-lg">01 - Overview</p>
       <h1 className="text-xl md:text-2xl lg:w-2/3 text-neutral-300 py-4">
-        <span className="text-lime-400">
+        <span className="text-lime-400 hover:font-bold hover:italic">
           <a href={botUrl}>Scuttle</a>
         </span>{" "}
         is a League of Legends discord bot for analyzing and comparing in-game
         match statistics with members of your server.{" "}
-        <span className="text-lime-400">
+        <span className="text-lime-400 hover:font-bold hover:italic">
           <a href={botUrl}>Click here to get Scuttle.</a>
         </span>
       </h1>

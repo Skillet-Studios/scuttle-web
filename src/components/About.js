@@ -1,6 +1,9 @@
 function About() {
   return (
-    <div className="xl:w-2/3 text-neutral-300 text-sm md:text-base lg:text-lg">
+    <div
+      className="xl:w-2/3 text-neutral-300 text-sm md:text-base lg:text-lg"
+      id="about"
+    >
       <p className="text-neutral-600 text-lg">03 - About</p>
       <div className="flex flex-col gap-6">
         <p className=" text-neutral-300 mt-5">
