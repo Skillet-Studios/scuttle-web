@@ -9,6 +9,8 @@ const apiUrl =
 function Overview() {
   const [numGuilds, setNumGuilds] = useState(0);
   const [numCommands, setNumCommands] = useState(0);
+  const [numSummoners, setNumSummoners] = useState(0);
+
   const botUrl =
     "https://discord.com/oauth2/authorize?client_id=1222960533523796089&permissions=17600776293376&scope=bot";
 
@@ -16,9 +18,11 @@ function Overview() {
     async function getAnalytics() {
       const guildsResponse = await axios.get(`${apiUrl}/guilds`);
       const commandsResponse = await axios.get(`${apiUrl}/commands`);
+      const summonersResponse = await axios.get(`${apiUrl}/summoners`);
 
       setNumGuilds(guildsResponse.data.numGuilds);
       setNumCommands(commandsResponse.data.numCommandsSent);
+      setNumSummoners(summonersResponse.data.totalSummoners);
     }
     getAnalytics();
   }, []);
@@ -40,6 +44,9 @@ function Overview() {
       <div className="flex items-center gap-10 text-neutral-600">
         <p>
           Guilds: <span className="text-lime-400">{numGuilds}</span>
+        </p>
+        <p>
+          Summoners: <span className="text-lime-400">{numSummoners}</span>
         </p>
         <p>
           Commands Sent: <span className="text-lime-400">{numCommands}</span>
