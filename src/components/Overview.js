@@ -30,7 +30,7 @@ function Overview() {
   return (
     <div className="">
       <p className="text-neutral-600 text-lg">01 - Overview</p>
-      <h1 className="text-xl md:text-2xl lg:w-2/3 text-neutral-300 py-4">
+      <h1 className="text-xl md:text-3xl lg:text-4xl xl:w-2/3 text-neutral-300 py-4">
         <span className="text-lime-400 hover:font-bold hover:italic">
           <a href={botUrl}>Scuttle</a>
         </span>{" "}
