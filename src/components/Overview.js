@@ -16,13 +16,13 @@ function Overview() {
 
   useEffect(() => {
     async function getAnalytics() {
-      const guildsResponse = await axios.get(`${apiUrl}/guilds`);
-      const commandsResponse = await axios.get(`${apiUrl}/commands`);
-      const summonersResponse = await axios.get(`${apiUrl}/summoners`);
+      const guildsResponse = await axios.get(`${apiUrl}/guilds/count`);
+      const commandsResponse = await axios.get(`${apiUrl}/commands/count`);
+      const summonersResponse = await axios.get(`${apiUrl}/summoners/count`);
 
-      setNumGuilds(guildsResponse.data.numGuilds);
-      setNumCommands(commandsResponse.data.numCommandsSent);
-      setNumSummoners(summonersResponse.data.totalSummoners);
+      setNumGuilds(guildsResponse.data);
+      setNumCommands(commandsResponse.data);
+      setNumSummoners(summonersResponse.data);
     }
     getAnalytics();
   }, []);
