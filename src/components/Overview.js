@@ -1,10 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-
-const apiUrl =
-  process.env.NODE_ENV === "production"
-    ? "https://api.scuttle.gg"
-    : "http://localhost:4000";
+import api from "../utils/api"; // Import the middleware
 
 function Overview() {
   const [numGuilds, setNumGuilds] = useState(0);
@@ -16,14 +11,22 @@ function Overview() {
 
   useEffect(() => {
     async function getAnalytics() {
-      const guildsResponse = await axios.get(`${apiUrl}/guilds/count`);
-      const commandsResponse = await axios.get(`${apiUrl}/commands/count`);
-      const summonersResponse = await axios.get(`${apiUrl}/summoners/count`);
+      try {
+        const [guildsResponse, commandsResponse, summonersResponse] =
+          await Promise.all([
+            api.get("/guilds/count"),
+            api.get("/commands/count"),
+            api.get("/summoners/count"),
+          ]);
 
-      setNumGuilds(guildsResponse.data);
-      setNumCommands(commandsResponse.data);
-      setNumSummoners(summonersResponse.data);
+        setNumGuilds(guildsResponse.data);
+        setNumCommands(commandsResponse.data);
+        setNumSummoners(summonersResponse.data);
+      } catch (error) {
+        console.error("Error fetching analytics:", error);
+      }
     }
+
     getAnalytics();
   }, []);
 
